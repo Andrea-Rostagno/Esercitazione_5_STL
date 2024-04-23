@@ -60,7 +60,7 @@ int main()
                 cerr << "Wrong mesh" << endl;
                 //return 2;
             }
-            else{cout << "Sium mesh" <<NumVertices[c]<< endl;}
+            else{cout << "Right mesh" <<NumVertices[c]<< endl;}
 
             auto findEnd = find(sium.begin(), sium.end(), en);
             if(findEnd == sium.end())
@@ -68,7 +68,7 @@ int main()
                 cerr << "Wrong mesh" << endl;
                 //return 3;
             }
-            else{cout << "Sium mesh" <<NumVertices[c]<< endl;}
+            else{cout << "Right mesh" <<NumVertices[c]<< endl;}
 
         }
     }
