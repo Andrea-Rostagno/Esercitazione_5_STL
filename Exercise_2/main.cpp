@@ -1,10 +1,7 @@
 #include <iostream>
-#include <fstream>
 #include <string>
 #include <vector>
 #include "src/Utils.hpp"
-#include <iomanip>
-#include<algorithm>
 
 using namespace std;
 
@@ -43,35 +40,8 @@ int main()
     //cout<<"Il vettore vertices: "<<Vertices<<endl;
     //cout<<"Il vettore Edges: "<<Edges<<endl;
 
-    for(unsigned int c = 0; c < Id2.size(); c++)
-    {
-        vector<double> edges = Edges[c];
+    cout<<NonZeroLenght(NumEdges,Edges)<<endl;
 
-        for(unsigned int e = 0; e < edges.size(); e++)
-        {
-            const unsigned int orig = origin[e];
-            const unsigned int en = end[e];
-            vector<double> sium;
-            sium=Vertices[c];
-            auto findOrigin = find(sium.begin(), sium.end(), orig);
-
-            if(findOrigin == sium.end())
-            {
-                cerr << "Wrong mesh" << endl;
-                //return 2;
-            }
-            else{cout << "Right mesh" <<NumVertices[c]<< endl;}
-
-            auto findEnd = find(sium.begin(), sium.end(), en);
-            if(findEnd == sium.end())
-            {
-                cerr << "Wrong mesh" << endl;
-                //return 3;
-            }
-            else{cout << "Right mesh" <<NumVertices[c]<< endl;}
-
-        }
-    }
 
     return 0;
 }

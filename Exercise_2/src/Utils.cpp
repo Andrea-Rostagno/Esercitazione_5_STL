@@ -166,3 +166,25 @@ vector<double> ImportCell2Ds(const string &filename2,vector<double> &Id2,vector<
     return Id2;
 
 }
+
+string NonZeroLenght(vector<double> &NumEdges,vector<vector<double>> &Edges){
+    int count=0;
+    vector<double> vet;
+    for (unsigned i = 0; i < NumEdges.size(); ++i) {
+        if(NumEdges[i]== 3){
+            vet=Edges[i];
+            for (unsigned j = 0; j < 3 ; ++j) {
+                if(vet[j]==0){
+                    count=count+1;
+                }
+            }
+            vet.clear();
+        }
+    }
+    if(count ==0){
+        return "Non sono presenti lati di triangoli uguali a zero";
+    }
+    else{
+        return "Sono presenti lati di triangoli uguali a zero";
+    }
+}

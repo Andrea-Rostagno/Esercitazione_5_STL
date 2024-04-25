@@ -16,5 +16,6 @@ vector<double> ImportCell1Ds(const string &filename1,vector<double> &Id1,vector<
 
 vector<double> ImportCell2Ds(const string &filename2,vector<double> &Id2,vector<double> &Marker2,vector<double> &NumVertices,vector<double> &NumEdges,vector<vector<double>> &Vertices,vector<vector<double>> &Edges);
 
+string NonZeroLenght(vector<double> &NumEdges,vector<vector<double>> &Edges);
 
 #endif
